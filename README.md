@@ -5,7 +5,7 @@ Tensile Dictionary is the most updated version and will yeild accurate results, 
 There is some hard coding for where the actualt data is pulled from the CSV file. For the most part this is clearly commented and could be changed to reflect what rows/cols your data starts in
 
 This code uses KSI and will convert from PSI to KSI by dividing by 1000!
-In addition it is assumed all inputted measurments (gugale length, thinkness, ect) are in inches!
+In addition it is assumed all inputted measurments (guage length, thinkness, ect) are in inches!
 
 
 Potential issues:
