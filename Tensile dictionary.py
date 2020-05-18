@@ -16,7 +16,7 @@ from scipy import stats
 
 # The first step is to read in the file. Please provide the complete file path between the quotation marks below
 # Do NOT DELETE the 'r' in front of the quotes
-file = r"C:\Users\megan\OneDrive\Documents\Research Spring 2020\vERTICLAab_fEB20_2020.is_tens_RawData\Specimen_RawData_11.csv"
+file = r"C:\Users\megan\OneDrive\Documents\Research Spring 2020\Inncoel718Megan.is_tens_RawData\Specimen_RawData_4.csv"
 # empty array the file will be read into
 data = []
 # Reads in file to the array data
@@ -147,7 +147,7 @@ strain_short = []
 for i in range(0, len(dct)):
     strain.append(dct[i][2])
     stress.append(dct[i][3])
-    if slope*dct[i][2]+intercept >= 0 and dct[i][2] <= 0.005: # If the stress is positive and the strain is less than 0.005
+    if slope*dct[i][2]+intercept >= 0 and dct[i][2] <= 0.006: # If the stress is positive and the strain is less than 0.005
         stress_calc.append(slope*dct[i][2]+intercept)
         strain_short.append(dct[i][2])
 # Plots the stress - strain curve with offset line
@@ -156,7 +156,7 @@ plt.plot(strain, stress)
 plt.plot(strain_short, stress_calc)
 plt.xlabel('Strain')
 plt.ylabel('Stress (ksi)')
-plt.title('Stress Vs. Strain with 0.002% offset line')
+plt.title('Stress Vs. Strain with 0.2% offset line, IX14')
 # Displays Plot, code will pause until plot is closed
 plt.show()
 
@@ -168,7 +168,7 @@ offset_key = 0
 for i in range(1, len(strain)):
     if np.abs(stress[i]-(slope*strain[i]+intercept)) < stress_dif:
         stress_dif = np.abs(stress[0]-stress_calc[0])
-        offset_key = i+1
+        offset_key = i
 offset_stress = dct[offset_key][3]
 offset_strain = dct[offset_key][2]
 print('offset stress', offset_stress, 'and strain', offset_strain)
