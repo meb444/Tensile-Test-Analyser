@@ -10,5 +10,5 @@ In addition it is assumed all inputted measurments (guage length, thinkness, ect
 
 Potential issues:
     Lack of clearly defined linear portion may result in an inacurate section chosen to calculate the modulus and offset yeild equation
-    Brittle sample may lead to the code calculating the modulus right befor the break, may also produce an offset yeild even if there is not one
+    Brittle sample may lead to the code calculating the modulus right before the break, may also produce an offset yeild even if there is not one
     No doubt more as this lacks substansive testing (only 18 samples, all INCONEL 718 produced through AM) - all samples were compared to a hand-performed test using excel and were found to be very close matches & no obvious trend in the error
